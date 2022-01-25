@@ -9,8 +9,8 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  host: 'localhost'
-  username: 'mrossier'
+  host: ENV['DB_HOST']
+  username: ENV['DB_USER']
   password: ''
 
 development:
