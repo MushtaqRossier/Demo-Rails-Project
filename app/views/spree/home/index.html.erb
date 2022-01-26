@@ -1,5 +1,5 @@
 <% @body_id = 'home-page' %>
-<% content_for :sidebar do %>
+<% content_for :sidebar do |f| %>
   <div data-hook="homepage_sidebar_navigation">
     <%= render partial: 'spree/shared/taxonomies' %>
   </div>

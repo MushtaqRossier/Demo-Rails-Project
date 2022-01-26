@@ -31,6 +31,8 @@ gem 'spree', '3.7.13'
 gem 'spree_auth_devise', '3.5.2'
 gem 'spree_gateway', '3.4.1'
 
+gem 'comfortable_mexican_sofa', '2.0.18'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
