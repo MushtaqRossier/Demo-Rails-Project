@@ -2,7 +2,19 @@
   <div id="main-nav-bar" class="navbar">
     <ul class="nav navbar-nav" data-hook>
       <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
+      <% taxon_categories = Spree::Taxonomy.find_by(name: "Categories").root %>
+      <% taxon_brands = Spree::Taxonomy.find_by(name: "Brands").root %>
+      <div class="dropdown">
+        <button  class="dropbtn">Select Department</button>
+        <div id="dropdown-menu" class="dropdown-content">
+          <%= link_to taxon_categories.name, seo_url(taxon_categories) %>
+          <%= link_to taxon_brands.name, seo_url(taxon_brands) %>
+        </div>
+      </div>
     </ul>
+
+    
+
     <ul class="nav navbar-nav navbar-right" data-hook>
       <li id="link-to-cart" data-hook>
         <noscript>
