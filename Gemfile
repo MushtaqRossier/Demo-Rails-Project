@@ -35,6 +35,7 @@ gem 'comfortable_mexican_sofa', '2.0.18'
 
 gem "slim-rails"
 
+gem 'data_migrate'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
