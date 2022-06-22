@@ -1,0 +1,8 @@
+- if @product.taxons.present?
+  - if @product.page.present?
+    h3.product-section-title = cms_fragment_render(:related_items_heading, @product.page)
+  - else
+    h3.product-section-title = Spree.t(:look_for_similar_items)
+  ul.list-group id="similar_items_by_taxon" data-hook=""
+    - @product.taxons.each do |taxon|
+      li.list-group-item = link_to taxon.name, seo_url(taxon)
